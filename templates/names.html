@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<u>
+    <h1>Students:</h1>
+    <a href="/">Home</a>
+</u>
+
+
+<ul>
+    <ul>
+        {% for person in peoples %}
+        <li><a href="/name/{{ person['name'] }}">{{ person.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+</ul>
+
+{% endblock %}
+    
