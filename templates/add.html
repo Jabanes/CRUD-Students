@@ -1,35 +1,37 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
 <body>
     <div class="container">
         <header>
             <h1>Add New Student</h1>
         </header>
-        
-        <form>
+
+        <div class="add-form">
             <div class="form-group">
-                <label for="StudentName">Student Name</label>
+                <label for="StudentName">Student Name:</label>
                 <input type="text" id="StudentName" name="StudentName" required placeholder="Enter student's full name">
             </div>
 
             <button onclick="add()">Add</button>
-        </form>
+        </div>
 
-        
+
     </div>
 </body>
 
 
 <script>
 
-    const studentName = document.getElementById('StudentName').value;
-    const add = () => {
 
-        if (studenName.value) {
+    const add = () => {
+        const studentName = document.getElementById('StudentName').value;
+        if (studentName) {
+
 
             axios.post('http://127.0.0.1:5000/add', {
-                name: studenName.value.trim(),
+                name: studentName.trim(),
             })
         }
         else {
