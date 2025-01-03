@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<u>
+    <h1>Select a student to Update</h1>
+    <a href="/">Home</a>
+</u>
+
+<ul>
+    <ul>
+        {% for person in peoples %}
+        <li>{{ person.name }} <button onclick="update({{person.id}})">Update</button> <input type="text" id="upd-{{person.id}}" placeholder="Select a new name:"> </a></li> 
+        {% endfor %}
+    </ul>
+
+</ul>
+{% endblock %}

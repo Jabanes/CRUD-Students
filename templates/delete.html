@@ -9,7 +9,7 @@
 <ul>
     <ul>
         {% for person in peoples %}
-        <li>{{ person.name }} <button onclick="del()">Delete</button> </a></li> 
+        <li>{{ person.name }} <button onclick="del({{person.id}})">Delete</button> </a></li> 
         {% endfor %}
     </ul>
 
