@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<u>
+    <h1>Select a student to delete:</h1>
+    <a href="/">Home</a>
+</u>
+
+<ul>
+    <ul>
+        {% for person in peoples %}
+        <li>{{ person.name }} <button onclick="del()">Delete</button> </a></li> 
+        {% endfor %}
+    </ul>
+
+</ul>
+{% endblock %}

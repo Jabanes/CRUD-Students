@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,16 @@
     <title>Student Management</title>
     {% endblock %}
     <link rel="stylesheet" href="static\style.css">
-    <!-- <script src="{{ url_for('static', filename='crud.js') }}"></script> -->
+    <script src="../static/crud.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   
 
-   
+
+
 </head>
+
 <body>
     <!-- Header Section -->
-   
+
 
     <!-- Main Content Section -->
     <main>
@@ -26,7 +28,7 @@
                 <ul>
                     <li><a href="/names">Manage Students</a></li>
                     <li><a href="/add">Add a student</a></li>
-                    <li><a href="">Delete a student</a></li>
+                    <li><a href="/delete">Delete a student</a></li>
                     <li><a href="">Update a student</a></li>
                 </ul>
             </nav>
@@ -39,4 +41,5 @@
         <p>&copy; 2025 Student Management System</p>
     </footer>
 </body>
+
 </html>

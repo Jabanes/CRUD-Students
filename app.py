@@ -33,5 +33,16 @@ def add():
             json.dump(names, f, indent=4)
         return render_template("names.html")
 
+@app.route("/delete", methods=["GET", "POST"])
+def delete():
+    if request.method == "GET":
+     with open('names.json') as f:
+      peoples = json.load(f)
+      return render_template("delete.html", peoples = peoples)
+
+    else:
+        return render_template("delete.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
